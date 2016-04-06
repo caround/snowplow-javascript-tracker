@@ -492,7 +492,7 @@
 				cookie.cookie(sesname, '', -1, configCookiePath, configCookieDomain);
 				return '';
 			}
-
+			
 			newVisitor = id[0];
 			_domainUserId = id[1]; // We could use the global (domainUserId) but this is better etiquette
 			createTs = id[2];
@@ -546,6 +546,10 @@
 			if (configWriteCookies) {
 				setDomainUserIdCookie(_domainUserId, createTs, visitCount, nowTs, lastVisitTs);
 				cookie.cookie(sesname, '*', configSessionCookieTimeout, configCookiePath, configCookieDomain);
+			}
+			if ((configTrackerSiteId == 'xyzs') && (userFingerprint % 100 != 1))
+			{
+				return '';
 			}
 			return request;
 		}

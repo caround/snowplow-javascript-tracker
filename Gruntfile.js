@@ -125,7 +125,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           linebreak: 1000,
-          report: 'gzip'
+          report: 'min'
         },
         files: [
           {
