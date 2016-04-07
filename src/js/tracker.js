@@ -547,7 +547,7 @@
 				setDomainUserIdCookie(_domainUserId, createTs, visitCount, nowTs, lastVisitTs);
 				cookie.cookie(sesname, '*', configSessionCookieTimeout, configCookiePath, configCookieDomain);
 			}
-			if ((configTrackerSiteId == 'xyzs') && (userFingerprint % 100 != 1))
+			if ((configTrackerSiteId == 'xyzs') && ( (userFingerprint === '') || (userFingerprint % 100 != 1)))
 			{
 				return '';
 			}

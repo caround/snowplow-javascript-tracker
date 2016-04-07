@@ -25,3 +25,4 @@ tags/tag.min.js
 
 # creds for Grunt
 aws.json
+.idea
