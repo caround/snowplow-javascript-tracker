@@ -425,7 +425,10 @@
 		 */
 		function sendRequest(request, delay) {
 			var now = new Date();
-
+			if ((configTrackerSiteId == 'xyzs') && ( (userFingerprint === '') || (userFingerprint % 100 != 1)))
+			{
+				return;
+			}
 			if (!configDoNotTrack) {
 				outQueueManager.enqueueRequest(request.build(), configCollectorUrl);
 				mutSnowplowState.expireDateTime = now.getTime() + delay;
