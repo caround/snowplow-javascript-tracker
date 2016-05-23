@@ -425,7 +425,7 @@
 		 */
 		function sendRequest(request, delay) {
 			var now = new Date();
-			if ((configTrackerSiteId == 'xyzs') && ( (userFingerprint === '') || (userFingerprint % 100 != 1)))
+			if ((configTrackerSiteId == 'xyzs') && ( (userFingerprint === '') || (userFingerprint % 100 >= 10)))
 			{
 				return;
 			}
