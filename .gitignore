@@ -31,3 +31,5 @@ aws.json
 VERSION
 
 .idea
+dist/
+
